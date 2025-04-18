@@ -1,0 +1,145 @@
+{
+  "id": "60799be7-e389-43e6-8369-65d6cbd35cc5",
+  "version": "2.0",
+  "name": "test_zaragoza",
+  "url": "https://www.zaragoza.es",
+  "tests": [{
+    "id": "244c9b5b-2149-45f3-9dd5-be7ffa9d36ae",
+    "name": "test_zaragoza",
+    "commands": [{
+      "id": "e3606d95-db5f-4766-9128-32132a829102",
+      "comment": "",
+      "command": "open",
+      "target": "/sede/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5e30daeb-0ad8-422c-9348-3e228bd5e089",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=GOBIERNO ABIERTO",
+      "targets": [
+        ["css=.icon-da div", "css:finder"],
+        ["xpath=//div[@id='rscont']/ul/li/a/div", "xpath:idRelative"],
+        ["xpath=//a/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4c731532-9c6c-4b77-9806-1bafe2edc5c8",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Datos abiertos",
+      "targets": [
+        ["css=li:nth-child(1) > .elemento > div:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='bs-example-navbar-collapse-1']/ul/li/a/div[2]", "xpath:idRelative"],
+        ["xpath=//a/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d942feec-a9d4-4a92-b3ba-3367131d46f0",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Catálogo",
+      "targets": [
+        ["css=.text-white > .h3", "css:finder"],
+        ["xpath=//div[@id='entradillaTitulo']/div[2]/a/span", "xpath:idRelative"],
+        ["xpath=//div[2]/a/span", "xpath:position"],
+        ["xpath=//span[contains(.,'catálogo')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "10d4401c-ab45-4e9b-980e-65301a692a1b",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//main/div/div/div/div/div/form/label/div/input",
+      "targets": [
+        ["id=inputOGI7YH6YCO", "id"],
+        ["css=#inputOGI7YH6YCO", "css:finder"],
+        ["xpath=//input[@id='inputOGI7YH6YCO']", "xpath:attributes"],
+        ["xpath=//form[@id='Form-CDBIG7HQOV']/label/div/input", "xpath:idRelative"],
+        ["xpath=//main/div/div/div/div/div/form/label/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5ba28658-140e-4d04-9270-525bfcd17722",
+      "comment": "",
+      "command": "type",
+      "target": "xpath=//main/div/div/div/div/div/form/label/div/input",
+      "targets": [
+        ["id=inputOGI7YH6YCO", "id"],
+        ["css=#inputOGI7YH6YCO", "css:finder"],
+        ["xpath=//input[@id='inputOGI7YH6YCO']", "xpath:attributes"],
+        ["xpath=//form[@id='Form-CDBIG7HQOV']/label/div/input", "xpath:idRelative"],
+        ["xpath=//main/div/div/div/div/div/form/label/div/input", "xpath:position"]
+      ],
+      "value": "elecciones"
+    }, {
+      "id": "bd44f22e-4e50-4e94-aafa-2086cefbf5fe",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "xpath=//main/div/div/div/div/div/form/label/div/input",
+      "targets": [
+        ["id=inputX672SJTGEL", "id"],
+        ["css=#inputX672SJTGEL", "css:finder"],
+        ["xpath=//input[@id='inputX672SJTGEL']", "xpath:attributes"],
+        ["xpath=//form[@id='Form-75B2ZA4636']/label/div/input", "xpath:idRelative"],
+        ["xpath=//main/div/div/div/div/div/form/label/div/input", "xpath:position"]
+      ],
+      "value": "${KEY_ENTER}"
+    }, {
+      "id": "c7fee32a-c799-455f-8ea8-021122bbdfaa",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//main/div/div/div/div/div/form/label/div/div/button/span/span[2]",
+      "targets": [
+        ["css=#BOU56XLA8BB .fa-solid", "css:finder"],
+        ["xpath=//button[@id='BOU56XLA8BB']/span/span[2]", "xpath:idRelative"],
+        ["xpath=//main/div/div/div/div/div/form/label/div/div/button/span/span[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d1f6c2db-16d5-4b51-85e5-c287e0875c48",
+      "comment": "Comprobar que aparece el texto con el número de resultados",
+      "command": "verifyText",
+      "target": "css=.results-found > span",
+      "targets": [
+        ["css=.results > span", "css:finder"],
+        ["xpath=//div[@id='rscont']/div/div/div/div[2]/div/div/span", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/span", "xpath:position"]
+      ],
+      "value": "2 resultados encontrados"
+    }, {
+      "id": "7e4e5b91-01b0-4c83-9eb0-729ba35c64ea",
+      "comment": "Comprobar que hay un resultado con el texto 'Elecciones Municipales'",
+      "command": "verifyElementPresent",
+      "target": "linkText=Elecciones Municipales",
+      "targets": [
+        ["linkText=Elecciones Municipales", "linkText"],
+        ["css=.card:nth-child(1) > .nomargin > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Elecciones Municipales')]", "xpath:link"],
+        ["xpath=//div[@id='rscont']/div[2]/div[2]/dl/dt/h3/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '317')]", "xpath:href"],
+        ["xpath=//h3/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Elecciones Municipales')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f79973e0-f629-439b-bfdb-2e86aadd9655",
+      "comment": "Comprobar que hay un resultado con el texto 'Elecciones Generales'",
+      "command": "verifyElementPresent",
+      "target": "linkText=Elecciones Generales",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "9abe5cd2-98d2-4517-9d55-11c845600c6c",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["244c9b5b-2149-45f3-9dd5-be7ffa9d36ae"]
+  }],
+  "urls": ["https://www.zaragoza.es/"],
+  "plugins": []
+}
